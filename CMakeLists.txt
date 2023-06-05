@@ -20,7 +20,7 @@ set(GLOBAL_DEFINITIONS _GNU_SOURCE)
 
 include(CMakeConfig.txt)
 include(GNUInstallDirs)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/CMake")
+list(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/CMake")
 
 if(BUILD_DOCS OR BUILD_DOCSONLY)
     add_subdirectory(docs)

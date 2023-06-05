@@ -5,8 +5,8 @@ target_link_libraries(libclient_common PRIVATE p9y)
 target_link_libraries(libclient_common PUBLIC libmemcached)
 target_include_directories(libclient_common PUBLIC
         .
-        ${CMAKE_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/include
         ${CMAKE_BINARY_DIR}/include
-        ${CMAKE_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src
         ${CMAKE_BINARY_DIR}/src
         ${CMAKE_BINARY_DIR})

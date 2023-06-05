@@ -18,9 +18,9 @@ if(ENABLE_MEMASLAP AND CMAKE_USE_PTHREADS_INIT)
                 ms_task.c
                 ms_thread.c)
         target_include_directories(aslap PRIVATE
-                ${CMAKE_SOURCE_DIR}/include
+                ${PROJECT_SOURCE_DIR}/include
                 ${CMAKE_BINARY_DIR}/include
-                ${CMAKE_SOURCE_DIR}/src
+                ${PROJECT_SOURCE_DIR}/src
                 ${CMAKE_BINARY_DIR}/src
                 ${CMAKE_BINARY_DIR})
         target_link_libraries(aslap PRIVATE libmemcached Threads::Threads ${LIBEVENT} m)

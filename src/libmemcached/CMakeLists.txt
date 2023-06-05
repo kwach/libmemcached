@@ -110,11 +110,11 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "SunPro")
     target_link_libraries(libmemcached INTERFACE stdc++ gcc_s CrunG3 c)
 endif()
 target_include_directories(libmemcached PRIVATE
-        ${CMAKE_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src
         ${CMAKE_BINARY_DIR}/src
         ${CMAKE_BINARY_DIR})
 target_include_directories(libmemcached PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
@@ -161,11 +161,11 @@ if(HAVE_BACKTRACE)
     target_link_libraries(libmemcachedinternal PUBLIC ${BACKTRACE})
 endif()
 target_include_directories(libmemcachedinternal PRIVATE
-        ${CMAKE_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src
         ${CMAKE_BINARY_DIR}/src
         ${CMAKE_BINARY_DIR})
 target_include_directories(libmemcachedinternal PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 

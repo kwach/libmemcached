@@ -29,11 +29,11 @@ if(MSVC OR MINGW)
     target_link_libraries(libmemcachedprotocol PUBLIC wsock32 ws2_32)
 endif()
 target_include_directories(libmemcachedprotocol PRIVATE
-        ${CMAKE_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src
         ${CMAKE_BINARY_DIR}/src
         ${CMAKE_BINARY_DIR})
 target_include_directories(libmemcachedprotocol PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 

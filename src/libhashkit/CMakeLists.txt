@@ -31,11 +31,11 @@ set_target_properties(libhashkit PROPERTIES
         VERSION ${LIBHASHKIT_SO_VERSION})
 target_compile_options(libhashkit PRIVATE -DBUILDING_HASHKIT)
 target_include_directories(libhashkit PRIVATE
-        ${CMAKE_SOURCE_DIR}/src
+        ${PROJECT_SOURCE_DIR}/src
         ${CMAKE_BINARY_DIR}/src
         ${CMAKE_BINARY_DIR})
 target_include_directories(libhashkit PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 

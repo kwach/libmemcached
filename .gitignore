@@ -12,6 +12,7 @@
 .project
 .settings/
 cmake-build-*/
+build/
 ccmake-*/
 tags
 venv/

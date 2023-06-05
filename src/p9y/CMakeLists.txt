@@ -16,8 +16,8 @@ set_target_properties(p9y PROPERTIES
 target_include_directories(p9y PRIVATE
     .
     ${PROJECT_SOURCE_DIR}/include
-    ${CMAKE_BINARY_DIR}
-    ${CMAKE_BINARY_DIR}/include
+    ${PROJECT_BINARY_DIR}
+    ${PROJECT_BINARY_DIR}/include
     )
 
 install(TARGETS p9y EXPORT p9y-targets

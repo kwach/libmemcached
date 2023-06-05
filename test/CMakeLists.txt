@@ -44,7 +44,7 @@ if(NOT MEMCACHED_BINARY)
 endif()
 
 add_executable(timeout timeout.c)
-target_include_directories(timeout PRIVATE ${CMAKE_BINARY_DIR})
+target_include_directories(timeout PRIVATE ${PROJECT_BINARY_DIR})
 
 file(GLOB_RECURSE TESTING_SRC RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
 set(TESTING_ROOT "${CMAKE_CURRENT_BINARY_DIR}")
@@ -54,9 +54,9 @@ add_executable(runtests ${TESTING_SRC})
 set_target_properties(runtests PROPERTIES CXX_STANDARD 17)
 target_include_directories(runtests PRIVATE
         ${PROJECT_SOURCE_DIR}
-        ${CMAKE_BINARY_DIR}
+        ${PROJECT_BINARY_DIR}
         ${PROJECT_SOURCE_DIR}/src
-        ${CMAKE_BINARY_DIR}/src)
+        ${PROJECT_BINARY_DIR}/src)
 target_link_libraries(runtests PRIVATE libhashkit libmemcachedinternal libmemcachedutil)
 
 # parallelism

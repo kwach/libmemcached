@@ -111,11 +111,11 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "SunPro")
 endif()
 target_include_directories(libmemcached PRIVATE
         ${PROJECT_SOURCE_DIR}/src
-        ${CMAKE_BINARY_DIR}/src
-        ${CMAKE_BINARY_DIR})
+        ${PROJECT_BINARY_DIR}/src
+        ${PROJECT_BINARY_DIR})
 target_include_directories(libmemcached PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-        $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
 enable_dtrace_for(libmemcached libmemcached_probes.d dtrace_probes.h)
@@ -162,11 +162,11 @@ if(HAVE_BACKTRACE)
 endif()
 target_include_directories(libmemcachedinternal PRIVATE
         ${PROJECT_SOURCE_DIR}/src
-        ${CMAKE_BINARY_DIR}/src
-        ${CMAKE_BINARY_DIR})
+        ${PROJECT_BINARY_DIR}/src
+        ${PROJECT_BINARY_DIR})
 target_include_directories(libmemcachedinternal PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-        $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
 enable_dtrace_for(libmemcachedinternal libmemcached_probes.d dtrace_probes.h)

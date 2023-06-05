@@ -1,5 +1,5 @@
 include(_Configure)
-configure_init(${CMAKE_BINARY_DIR}/mem_config.h)
+configure_init(${PROJECT_BINARY_DIR}/mem_config.h)
 
 add_compile_definitions(${GLOBAL_DEFINITIONS})
 # list(TRANSFORM) requires >=3.12

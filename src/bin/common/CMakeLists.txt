@@ -6,7 +6,7 @@ target_link_libraries(libclient_common PUBLIC libmemcached)
 target_include_directories(libclient_common PUBLIC
         .
         ${PROJECT_SOURCE_DIR}/include
-        ${CMAKE_BINARY_DIR}/include
+        ${PROJECT_BINARY_DIR}/include
         ${PROJECT_SOURCE_DIR}/src
-        ${CMAKE_BINARY_DIR}/src
-        ${CMAKE_BINARY_DIR})
+        ${PROJECT_BINARY_DIR}/src
+        ${PROJECT_BINARY_DIR})

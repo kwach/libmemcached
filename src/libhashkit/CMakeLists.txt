@@ -32,11 +32,11 @@ set_target_properties(libhashkit PROPERTIES
 target_compile_options(libhashkit PRIVATE -DBUILDING_HASHKIT)
 target_include_directories(libhashkit PRIVATE
         ${PROJECT_SOURCE_DIR}/src
-        ${CMAKE_BINARY_DIR}/src
-        ${CMAKE_BINARY_DIR})
+        ${PROJECT_BINARY_DIR}/src
+        ${PROJECT_BINARY_DIR})
 target_include_directories(libhashkit PUBLIC
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-        $<BUILD_INTERFACE:${CMAKE_BINARY_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/include>
         $<INSTALL_INTERFACE:include>)
 
 if(ENABLE_OPENSSL_CRYPTO)
